@@ -1,34 +1,80 @@
-# Administrador de productos
+# Hola mundo, Login y register
 
-## ¿Que es?
+## Instalación
+**Importante:** Para poder continuar con la instalacion es necesario descargar los siguientes programas 
 
-Este proyecto tiene como objetivo crear un registro completo de todos los productos de un negocio y proporcionar estadísticas relevantes para que puedas tomar decisiones informadas acerca de qué productos son los más vendidos y cuáles es conveniente conservar. De esta manera, podrás mejorar la gestión de tu negocio y optimizar tus estrategias de venta y marketing. 
+### Links
+- Node: [Descargas](https://nodejs.org/es/download)
+- MongoDB: [Descargas](https://www.mongodb.com/try/download/community)
+- Git [Descargas](https://git-scm.com/downloads)
 
-## Caracteristicas
-- ### Venta de productos:
+Para instalar el proyecto en tu máquina local, primero clonamos el repositorio, para esto es nesesario git,
+para clonar abrimos la terminal powershell en Windows funciona y copias el siguiente link
+```bash
+git clone https://github.com/AdrianCM21/pasantia_login.git
+```
 
-  En este apartado podrás escanear los códigos de barras de los diferentes productos vendidos, lo que te permitirá obtener el total de todas las ventas realizadas. Estos datos serán de gran utilidad para generar estadísticas y obtener información valiosa acerca del desempeño de tu negocio.
-  
-    
-   
-- ### Estadisticas:
+## Cliente
 
-  En esta sección, tendrás acceso a las estadísticas más relevantes para tu negocio, como el producto más vendido, las ventas por mes y las ventas por día. Estos datos te permitirán obtener una visión clara y detallada del desempeño de tu negocio, identificar patrones y tendencias en el comportamiento de tus clientes y tomar decisiones informadas para mejorar tus estrategias de venta y marketing.
+Luego para empezar con el cliente nos ubicamon en la carpeta que se a clonado (pasantia_login) y abrimos la terminal posterior nos movemos a la carpeta clientes con el comando ```cd client```
 
-     
-- ### Carga de productos:
+en esta ubicaion escribimos y copiamos el siguiete comando
+```bash
+npm install
+```
+esto instalara todas las dependencias para el funcionamineto del proyecto 
 
-  Para la carga de productos, necesitarás ingresar los siguientes datos: nombre del producto, precio de compra, precio de venta, unidades disponibles y stock crítico. Es importante que ingreses estos datos con precisión para asegurar que tu registro de productos sea completo y confiable. 
-  
+Luego, inicia el cliente con el siguiente comando:
+```bash
+npm start
+```
+## Servidor
 
+Para iniciar el servidor, Primero abrimos una nueva terminal y nos ubicamos en este caso en la carpeta de servert y realizamos los mismos paso que el punto anterior ejecutamos el comando:
+```bash
+npm install
+```
+Y tendrias listas todas las dependencias ahora para que el proyecto te funcione nesecitas configurar las variables de entorno
+Crea un archivo .env en la carpeta servidor y agrega las siguientes variables de entorno:
+```bash
+MONGO_URL="mongodb://0.0.0.0:27017/nombre_que_quiereas"
+MI_CLAVESECRETA="ylme2"
+```
+***NOTA:*** Hay un archivo .env copy de ejemplo. Mongodb no reconose localhost por ello es necesario colocar su equivalente 0.0.0.0. Al colocar el link colocas el numbre de tu tabla pon lo que quieras como indico en el ejemplo. La clave secreta es necesaria pero puedes colocar la que quieras.
 
+Para iniciar el servidor, ejecuta el siguiente comando en la carpeta servidor:
+```bash
+npm start
+```
 
-- ### Listar productos:
+## Tecnologías utilizadas
 
-  En esta sección, podrás listar todos los productos y acceder a información detallada como las unidades disponibles, el stock crítico y una advertencia en caso de que se alcance el stock crítico. Además, encontrarás un apartado específico para reponer el stock de los productos que hayan alcanzado su nivel mínimo. De esta forma, podrás mantener un control óptimo del inventario y asegurarte de que siempre haya suficiente stock disponible para tus clientes.
-   
-   
-   
-  
-  
+El proyecto se desarrolló utilizando las siguientes tecnologías:
 
+### Cliente
+- formik
+- sweetalert2
+- env
+- React
+- React Router DOM
+- Animate.css
+- Axios
+
+### Servidor
+
+- Node.js
+- Express.js
+- MongoDB
+- Express-validator
+- Jsonwebtoken
+- Bcryptjs
+- Axios
+- Cors
+
+## Contribuir
+
+Si deseas contribuir al proyecto, puedes hacer un fork del repositorio y enviar tus cambios en un pull request.
+
+## Licencia
+
+Este proyecto utiliza la licencia MIT.
