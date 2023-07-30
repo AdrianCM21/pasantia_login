@@ -15,7 +15,7 @@ module.exports.getUsers = async (request, response) => {
 }
 module.exports.createUser = async (request, response) => {
     const {nombre,email,password,confirmPassword}=request.body
-    time= new Date()
+    time= new Date().toLocaleString()
     try{
     const user = new User({nombre,email,password,confirmPassword,ultimaVez:time});
     await user.save();
@@ -39,7 +39,7 @@ module.exports.login= async (req, res) => {
         }
         const esValido = await bcrypt.compare(password, user.password);
         if(esValido){
-            time= new Date()
+            time= new Date().toLocaleString()
             await User.findOneAndUpdate({ email: Email }, {ultimaVez:time})
             const secret = process.env.MI_CLAVESECRETA;
             const newJWT = jwt.sign({
