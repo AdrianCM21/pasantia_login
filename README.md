@@ -1,12 +1,20 @@
 # Hola mundo, Login y register
 
-## Instalación
-**Importante:** Para poder continuar con la instalacion es necesario descargar los siguientes programas 
+## Pre-Instalacion
+Para poder ejecutar de el proyecto es necesario le instalar los siguientes programas la instalacion dependiendo de tu sistema operativo podes consultar en la documentacion de los programas indicados para mas detalles, este proyecto fue diseñado con las versiones indicadas, pueden funcionar con versiones posteriores o inferionres cuestion de probar :).
+
+**En windows:** Ir a la pagina principal y descargar el instalador 
+**En Linux:** Asegurarte de tener instalado curd con este comando 
+```sudo apt install```
 
 ### Links
-- Node: [Descargas](https://nodejs.org/es/download)
-- MongoDB: [Descargas](https://www.mongodb.com/try/download/community)
-- Git [Descargas](https://git-scm.com/downloads)
+- Node ^18.17.0: [Pagina de node](https://nodejs.org/es/download)
+- MongoDB ^6.0.8: [Pagina de MongoDB](https://www.mongodb.com/try/download/community)
+
+**NOTA:** versiones de las dependencias estan indicadas en el package.json tanto en el servidor y cliente
+
+## Instalación windows
+**Versiones probadas:** [windows 10, windows 11], si pruebas con otras versiones y funciona agregar a la lista seria de gran ayuda
 
 Para instalar el proyecto en tu máquina local, primero clonamos el repositorio, para esto es nesesario git,
 para clonar abrimos la terminal powershell en Windows funciona y copias el siguiente link
@@ -46,6 +54,9 @@ Para iniciar el servidor, ejecuta el siguiente comando en la carpeta servidor:
 ```bash
 npm start
 ```
+
+## Instalación Linux
+
 
 ## Tecnologías utilizadas
 
